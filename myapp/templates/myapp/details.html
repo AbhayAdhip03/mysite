@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{book.name}}</title>
+</head>
+<body>
+
+        <table cellspacing="100">
+            <tr>
+                <td>
+                    <img  src="{{book.book_image.url}}" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSLJuC3hnAqrAnxG9qgQiQ4GXXBGUCxse2UMOA0cjIqln9UfHrxqodZWW4amMs6hRcbsw&usqp=CAU">
+                </td>
+                <td>
+                    <h2>{{book.name}}</h2>
+                    <h4>{{book.desc}}</h4>
+                    <h6>{{book.price}}</h6>
+                </td>
+            </tr>
+        </table>
+        <a class="btn btn-warning" href="{% url 'update' book.id %}">update</a>
+    
+</body>
+</html>

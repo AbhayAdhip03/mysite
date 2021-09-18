@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>HomePage</title>
+</head>
+<body>
+    <!-- As a link -->
+<nav class="navbar navbar-light bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+  </nav>
+  </nav>
+    <h1>This Ecommerce Website Is Under Development</h1>
+    <br>
+    
+
+    <div class="container"></div>
+        <div class="row">
+            {% for book in book_list%}
+            <div class="col-md-3">
+                <div class="card" style="width: 18 rem">
+                    <img src="{{book.book_image.url}}" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSLJuC3hnAqrAnxG9qgQiQ4GXXBGUCxse2UMOA0cjIqln9UfHrxqodZWW4amMs6hRcbsw&usqp=CAU">
+                   <div class="card-body">
+                      <h5 class="card-title">
+                        {{book.name}}
+                      </h5>
+                      <p class="card-body">
+                        {{book.desc}}
+                      </p>
+                      <p>${{book.price}}</p>
+                      <a class="btn btn-warning" href="/book/{{book.id}}">Show Full Details</a> 
+                   </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</body>
+</html>
